@@ -21,14 +21,14 @@ Buy me Coffee with BAT 0xb9f4845dbEd1FB1Dae90D8e203037B5623B66666
 # You can add this link to your gravity list by going to 
 http://piholeIPAddress/admin/groups-adlists.php  </br>
 ```https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt``` </br></br>
-and the list added by the crowed </br>
+and the list added by the crowed <span color="red">Keep in mind the crowd list it is all DNS gathered by the crowd WITHOUT filtering the block DNS </span> </br>
 ```https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/crowed_list.txt```
 
 Also, add script to update the gravity list containing these lines : 
 ``` pihole -g ```
 ``` sudo pihole restartdns ```
-if you experince youtube loops or blocking to the actual video while using the gravity </br>
-Please clear the gravity domain list as it some times keep the ignore list :</br>
+if you experience youtube loops or blocking to the actual video while using the gravity </br>
+Please clear the gravity domain list as it sometimes keep the ignore list :</br>
 ```
 /usr/bin/sqlite3 /etc/pihole/gravity.db "delete from gravity where domain like '%googlevideo.com%' "
 pihole -g
